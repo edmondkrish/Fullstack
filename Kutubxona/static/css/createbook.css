@@ -1,0 +1,20 @@
+.createbook{
+    margin: 30px;
+
+}
+.form-control{
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.carding{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}

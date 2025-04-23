@@ -1,0 +1,50 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}Create Book{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/createbook.css' %}">
+
+<div class="createbook">
+    <div class="container ">
+        <div class="row">
+            <div class="col-8">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Create Book</button>
+                    <a href="{% url 'books' %}" class="btn btn-secondary">Cancel</a>
+                </form> 
+            </div>
+
+            
+            <div class="col-4 carding">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Tavsif</h1>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">📚 Kitob qo‘shish</h5>
+                        <p class="card-text">O‘z kutubxonangizni kengaytiring!
+                            Bu bo‘lim orqali siz yangi kitoblarni tizimga qo‘shishingiz mumkin. Kitob nomi, muallif, janr, chop etilgan sana va qisqacha mazmun kabi ma’lumotlarni kiriting. Ushbu funksional sizga o‘z shaxsiy kutubxonangizni yaratish va tartibga solishga yordam beradi.</p>
+                        <p class="card-text">Ushbu bo‘limda siz kitobning muallifi, janri va boshqa tafsilotlarini kiritishingiz mumkin. Kitob qo‘shish jarayoni juda oson va tez amalga oshiriladi.</p>
+                        <p class="card-text">Kitob qo‘shish jarayonida sizdan quyidagi ma’lumotlar so‘raladi:</p>
+                        <ul>
+                            <li>Har bir kitob uchun muallif va janrni ajratib ko‘rsatis</li>
+                            <li>Kitob rasmini yuklash imkoniyati</li>
+                            <li>Kitob haqida izoh yoki tavsiyalar qo‘shish</li>
+                            <li>Kitobni qaysi tilga tarjima qilinganligini ko‘rsatish</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+
+</div>
+
+
+{% endblock %}

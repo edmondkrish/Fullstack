@@ -1,0 +1,1250 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Kutubxona</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1d96e77c-dcc1-80f4-96b8-cfa058632bce" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/iterate_blue.svg"/></div><h1 class="page-title">Kutubxona</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Team</th><td></td></tr><tr class="property-row property-row-status"><th><span class="icon property-icon"><svg aria-hidden="true" role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesStatus"><path d="M8.75488 1.02344C8.75488 0.613281 8.41309 0.264648 8.00293 0.264648C7.59277 0.264648 7.25098 0.613281 7.25098 1.02344V3.11523C7.25098 3.51855 7.59277 3.86719 8.00293 3.86719C8.41309 3.86719 8.75488 3.51855 8.75488 3.11523V1.02344ZM3.91504 5.0293C4.20215 5.31641 4.69434 5.32324 4.97461 5.03613C5.26855 4.74902 5.26855 4.25684 4.98145 3.96973L3.53906 2.52051C3.25195 2.2334 2.7666 2.21973 2.47949 2.50684C2.19238 2.79395 2.18555 3.28613 2.47266 3.57324L3.91504 5.0293ZM10.9629 4.01758C10.6826 4.30469 10.6826 4.79688 10.9697 5.08398C11.2568 5.37109 11.749 5.36426 12.0361 5.07715L13.4854 3.62793C13.7725 3.34082 13.7725 2.84863 13.4785 2.55469C13.1982 2.27441 12.7061 2.27441 12.4189 2.56152L10.9629 4.01758ZM15.0234 8.78906C15.4336 8.78906 15.7822 8.44727 15.7822 8.03711C15.7822 7.62695 15.4336 7.28516 15.0234 7.28516H12.9385C12.5283 7.28516 12.1797 7.62695 12.1797 8.03711C12.1797 8.44727 12.5283 8.78906 12.9385 8.78906H15.0234ZM0.975586 7.28516C0.56543 7.28516 0.223633 7.62695 0.223633 8.03711C0.223633 8.44727 0.56543 8.78906 0.975586 8.78906H3.07422C3.48438 8.78906 3.83301 8.44727 3.83301 8.03711C3.83301 7.62695 3.48438 7.28516 3.07422 7.28516H0.975586ZM12.0361 10.9902C11.749 10.71 11.2568 10.71 10.9629 10.9971C10.6826 11.2842 10.6826 11.7764 10.9697 12.0635L12.4258 13.5127C12.7129 13.7998 13.2051 13.793 13.4922 13.5059C13.7793 13.2256 13.7725 12.7266 13.4854 12.4395L12.0361 10.9902ZM2.52051 12.4395C2.22656 12.7266 2.22656 13.2188 2.50684 13.5059C2.79395 13.793 3.28613 13.7998 3.57324 13.5127L5.02246 12.0703C5.31641 11.7832 5.31641 11.291 5.03613 11.0039C4.74902 10.7168 4.25684 10.71 3.96973 10.9971L2.52051 12.4395ZM8.75488 12.9658C8.75488 12.5557 8.41309 12.207 8.00293 12.207C7.59277 12.207 7.25098 12.5557 7.25098 12.9658V15.0576C7.25098 15.4609 7.59277 15.8096 8.00293 15.8096C8.41309 15.8096 8.75488 15.4609 8.75488 15.0576V12.9658Z"></path></svg></span>Status</th><td><span class="status-value select-value-color-blue"><div class="status-dot status-dot-color-blue"></div>In progress</span></td></tr></tbody></table></header><div class="page-body"><h3 id="1d96e77c-dcc1-80a9-b1d6-cea4f99ee581" class=""></h3><h3 id="1d96e77c-dcc1-80f4-a9c8-e8fce8ad8312" class=""><strong>1. Models (ORM)</strong></h3><p id="1d96e77c-dcc1-8086-835f-e78cf5719c0b" class="">Model nomi: <code>Books</code></p><ul id="1d96e77c-dcc1-807c-8962-d7ca649fd739" class="bulleted-list"><li style="list-style-type:disc"><code>nomi</code> (book name)</li></ul><ul id="1d96e77c-dcc1-80d8-9e7b-cc89973381a1" class="bulleted-list"><li style="list-style-type:disc"><code>yili</code> (year of publication)</li></ul><ul id="1d96e77c-dcc1-80e6-b105-d2a9f82ec4ee" class="bulleted-list"><li style="list-style-type:disc"><code>muallif</code> (author)</li></ul><ul id="1d96e77c-dcc1-80f4-96eb-de82acb6f7b5" class="bulleted-list"><li style="list-style-type:disc"><code>url</code> (for redirect/detail)</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-80ae-aed7-e6d5d878b878" class="code"><code class="language-Python">from django.db import models 
+
+class Book(models.Model):
+nomi = models.CharField(max_length=200)
+yili = models.IntegerField()
+muallif = models.CharField(max_length=200)
+url = models.URLField(blank=True)
+
+def __str__(self):
+    return self.nomi
+</code></pre><p id="1d96e77c-dcc1-803c-8b76-d510988dc962" class="">
+</p><h3 id="1d96e77c-dcc1-80a7-a9e3-d98cb779eafd" class=""><strong>2. Views</strong></h3><p id="1d96e77c-dcc1-8025-9216-ef7cf4422de9" class="">Sahifalar:</p><ul id="1d96e77c-dcc1-80f7-b6f9-d7c0cfca79b1" class="bulleted-list"><li style="list-style-type:disc"><strong>Base</strong>: Bosh layout (navbar, footer)</li></ul><ul id="1d96e77c-dcc1-802b-8d83-ef892e150354" class="bulleted-list"><li style="list-style-type:disc"><strong>Home</strong>: Asosiy sahifa</li></ul><ul id="1d96e77c-dcc1-80ee-829d-db1f0655f7d3" class="bulleted-list"><li style="list-style-type:disc"><strong>Books</strong>: Kitoblar ro‘yxati</li></ul><ul id="1d96e77c-dcc1-8063-8b55-e765911dd6b4" class="bulleted-list"><li style="list-style-type:disc"><strong>Detail B</strong>: Kitobning batafsil sahifasi</li></ul><ul id="1d96e77c-dcc1-804f-ab81-eec2e3f7d273" class="bulleted-list"><li style="list-style-type:disc"><strong>Edit Books</strong>: Kitobni tahrirlash</li></ul><ul id="1d96e77c-dcc1-80a1-9125-d2ddf603415e" class="bulleted-list"><li style="list-style-type:disc"><strong>Create B</strong>: Yangi kitob qo‘shish</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-80ad-a492-e8660da32548" class="code"><code class="language-Python">from django.shortcuts import render, get_object_or_404, redirect
+from .models import Book
+from .forms import BookForm
+
+# Home sahifasi
+def home(request):
+    return render(request, &#x27;home.html&#x27;)
+
+# Kitoblar ro&#x27;yxati
+def book_list(request):
+    books = Book.objects.all()
+    return render(request, &#x27;books.html&#x27;, {&#x27;books&#x27;: books})
+
+# Kitob batafsil
+def book_detail(request, id):
+    book = get_object_or_404(Book, id=id)
+    return render(request, &#x27;book_detail.html&#x27;, {&#x27;book&#x27;: book})
+
+# Kitob qo&#x27;shish
+def create_book(request):
+    if request.method == &#x27;POST&#x27;:
+        form = BookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(&#x27;books&#x27;)
+    else:
+        form = BookForm()
+    return render(request, &#x27;create_book.html&#x27;, {&#x27;form&#x27;: form})
+
+# Kitobni tahrirlash
+def edit_book(request, id):
+    book = get_object_or_404(Book, id=id)
+    if request.method == &#x27;POST&#x27;:
+        form = BookForm(request.POST, instance=book)
+        if form.is_valid():
+            form.save()
+            return redirect(&#x27;book_detail&#x27;, id=book.id)
+    else:
+        form = BookForm(instance=book)
+    return render(request, &#x27;edit_book.html&#x27;, {&#x27;form&#x27;: form, &#x27;book&#x27;: book})
+
+# Kitobni o&#x27;chirish
+def delete_book(request, id):
+    book = get_object_or_404(Book, id=id)
+    if request.method == &#x27;POST&#x27;:
+        book.delete()
+        return redirect(&#x27;books&#x27;)
+    return render(request, &#x27;delete_book.html&#x27;, {&#x27;book&#x27;: book})
+</code></pre><p id="1d96e77c-dcc1-80db-8415-dafc1ad1c527" class="">
+</p><h3 id="1d96e77c-dcc1-8065-9e29-ea734d3437b2" class=""><strong>3. URLs</strong></h3><p id="1d96e77c-dcc1-807d-8628-e4d8d03f003c" class="">Siz kiritgan URL’lar:</p><ul id="1d96e77c-dcc1-8022-af48-e752167eca17" class="bulleted-list"><li style="list-style-type:disc"><code>/home/</code></li></ul><ul id="1d96e77c-dcc1-80d4-84c4-e5b32076ce46" class="bulleted-list"><li style="list-style-type:disc"><code>/books/</code></li></ul><ul id="1d96e77c-dcc1-8012-8d23-e8d680f022b8" class="bulleted-list"><li style="list-style-type:disc"><code>/book-detail/&lt;id&gt;/</code></li></ul><ul id="1d96e77c-dcc1-808b-8cc9-dc70d5fa1bdd" class="bulleted-list"><li style="list-style-type:disc"><code>/book-edit/&lt;id&gt;/</code></li></ul><ul id="1d96e77c-dcc1-80c5-9f74-e27c35f64839" class="bulleted-list"><li style="list-style-type:disc"><code>/create/</code></li></ul><p id="1d96e77c-dcc1-80eb-a8f7-c2699fd9123d" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8065-957f-fd83ce82fe21" class="code"><code class="language-Python">from django.urls import path
+from . import views
+
+urlpatterns = [
+path(&#x27;&#x27;, views.home, name=&#x27;home&#x27;),
+path(&#x27;books/&#x27;, views.book_list, name=&#x27;books&#x27;),
+path(&#x27;book-detail/int:id/&#x27;, views.book_detail, name=&#x27;book_detail&#x27;),
+path(&#x27;book-edit/int:id/&#x27;, views.edit_book, name=&#x27;edit_book&#x27;),
+path(&#x27;create/&#x27;, views.create_book, name=&#x27;create_book&#x27;),
+]</code></pre><p id="1d96e77c-dcc1-80c1-aa12-cb23cb4074d3" class="">
+</p><h3 id="1d96e77c-dcc1-80f0-8455-d0e01f138449" class=""><strong>3.Forms</strong></h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8024-8552-cf300c73c501" class="code"><code class="language-Python">from django import forms
+from .models import Book
+
+class BookForm(forms.ModelForm):
+class Meta:
+model = Book
+fields = [&#x27;nomi&#x27;, &#x27;yili&#x27;, &#x27;muallif&#x27;, &#x27;url&#x27;]
+widgets = {
+&#x27;nomi&#x27;: forms.TextInput(attrs={&#x27;class&#x27;: &#x27;form-control&#x27;}),
+&#x27;yili&#x27;: forms.NumberInput(attrs={&#x27;class&#x27;: &#x27;form-control&#x27;}),
+&#x27;muallif&#x27;: forms.TextInput(attrs={&#x27;class&#x27;: &#x27;form-control&#x27;}),
+&#x27;url&#x27;: forms.URLInput(attrs={&#x27;class&#x27;: &#x27;form-control&#x27;}),
+}</code></pre><p id="1d96e77c-dcc1-80fc-94b7-f1fa1f618668" class="">
+</p><p id="1d96e77c-dcc1-803f-804b-d8893cd5c1f2" class="">
+</p><p id="1d96e77c-dcc1-8098-92e8-dba9bd569978" class="">
+</p><p id="1d96e77c-dcc1-80a3-919f-c4d614411e41" class="">
+</p><p id="1d96e77c-dcc1-80c0-a99e-d51c1624decd" class="">4.HTML</p><p id="1d96e77c-dcc1-8012-ad75-e7284d76da62" class="">base.html</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-80a9-98e7-c110165e4da0" class="code"><code class="language-Python">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uz&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;{% block title %}Kutubxona{% endblock %}&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-dark text-white&quot;&gt;
+    &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark bg-danger&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;a class=&quot;navbar-brand&quot; href=&quot;{% url &#x27;home&#x27; %}&quot;&gt;Kutubxona&lt;/a&gt;
+            &lt;div&gt;
+                &lt;a class=&quot;nav-link d-inline text-white&quot; href=&quot;{% url &#x27;books&#x27; %}&quot;&gt;Kitoblar&lt;/a&gt;
+                &lt;a class=&quot;nav-link d-inline text-white&quot; href=&quot;{% url &#x27;create_book&#x27; %}&quot;&gt;Yangi Kitob&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div class=&quot;container mt-4&quot;&gt;
+        {% block content %}
+        {% endblock %}
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p id="1d96e77c-dcc1-80a0-abdf-ebd29d174111" class="">home.html</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-80c4-9c4a-f13bde91fce3" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}Bosh sahifa{% endblock %}
+
+{% block content %}
+&lt;h1&gt;Xush kelibsiz kutubxonaga!&lt;/h1&gt;
+&lt;p&gt;Bu yerda siz kitoblar ro&#x27;yxatini ko&#x27;rishingiz, tahrirlashingiz yoki yangi kitob qo&#x27;shishingiz mumkin.&lt;/p&gt;
+{% endblock %}</code></pre><p id="1d96e77c-dcc1-8076-bff0-cf57d45ff01f" class="">books.html</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8051-a146-efecaf8a8613" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}Kitoblar{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Kitoblar ro&#x27;yxati&lt;/h2&gt;
+&lt;ul class=&quot;list-group&quot;&gt;
+    {% for book in books %}
+        &lt;li class=&quot;list-group-item bg-secondary text-white&quot;&gt;
+            &lt;a class=&quot;text-white&quot; href=&quot;{% url &#x27;book_detail&#x27; book.id %}&quot;&gt;{{ book.nomi }}&lt;/a&gt;
+        &lt;/li&gt;
+    {% empty %}
+        &lt;li class=&quot;list-group-item&quot;&gt;Kitoblar yo‘q&lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-8099-afe1-f56e740c54da" class="">book_detail.html</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-80cf-8827-e98bd7bdc66f" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}{{ book.nomi }}{% endblock %}
+
+{% block content %}
+&lt;h2&gt;{{ book.nomi }}&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Muallif:&lt;/strong&gt; {{ book.muallif }}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nashr yili:&lt;/strong&gt; {{ book.yili }}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Havola:&lt;/strong&gt; &lt;a href=&quot;{{ book.url }}&quot; target=&quot;_blank&quot;&gt;{{ book.url }}&lt;/a&gt;&lt;/p&gt;
+
+&lt;a href=&quot;{% url &#x27;edit_book&#x27; book.id %}&quot; class=&quot;btn btn-warning&quot;&gt;Tahrirlash&lt;/a&gt;
+&lt;form method=&quot;post&quot; action=&quot;{% url &#x27;delete_book&#x27; book.id %}&quot; style=&quot;display:inline;&quot;&gt;
+    {% csrf_token %}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-danger&quot;&gt;O&#x27;chirish&lt;/button&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-80c0-84ff-ccbfcb62255c" class="">create_book.html</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-804c-88eb-d2fc9d328556" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}Yangi Kitob{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Yangi kitob qo&#x27;shish&lt;/h2&gt;
+&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-success&quot;&gt;Saqlash&lt;/button&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-802f-b078-e6a5966e20a2" class="">edit_book.html</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-80ba-9138-c28c30670e01" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}{{ book.nomi }} - Tahrirlash{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Kitobni tahrirlash: {{ book.nomi }}&lt;/h2&gt;
+&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Saqlash&lt;/button&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-8032-b341-cb63ef3579e8" class="">delete_book.html</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-801a-9f76-ce3e6ab87150" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}{{ book.nomi }} - O&#x27;chirish{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Haqiqatan ham &quot;{{ book.nomi }}&quot; kitobini o‘chirmoqchimisiz?&lt;/h2&gt;
+&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-danger&quot;&gt;Ha, o‘chirish&lt;/button&gt;
+    &lt;a href=&quot;{% url &#x27;book_detail&#x27; book.id %}&quot; class=&quot;btn btn-secondary&quot;&gt;Bekor qilish&lt;/a&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><h1 id="1d96e77c-dcc1-8073-8ef1-d2c4a4ef3ef1" class=""><strong>YANGI QISMGA OTDIK</strong></h1><h2 id="1d96e77c-dcc1-808d-b41d-e771dd0cd1d5" class="">1. <strong>Admin Panel (admin.py)</strong></h2><p id="1d96e77c-dcc1-804b-8950-d7d9a3c360b1" class=""><code>admin.py</code> faylini ochib, unda Book modelini ro’yxatdan o’tkazing:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-80da-bfb2-de892371e96b" class="code"><code class="language-Python">from django.contrib import admin
+from .models import Book
+
+admin.site.register(Book)
+</code></pre><h2 id="1d96e77c-dcc1-8036-af4a-f81fa0f6c1e4" class="">2. <strong>Foydalanuvchi autentifikatsiyasi va boshqa funksiyalar (views.py)</strong></h2><p id="1d96e77c-dcc1-80d4-9231-d30beb9ccb90" class=""><code>views.py</code> fayli qatorini yangilang. Bu yerda:</p><ul id="1d96e77c-dcc1-8016-8e29-ee47f1e68989" class="bulleted-list"><li style="list-style-type:disc"><strong>book_list</strong>: Qidiruv (search) va pagination qo’llanilgan.</li></ul><ul id="1d96e77c-dcc1-80c6-b4a1-cd6e47fbfda6" class="bulleted-list"><li style="list-style-type:disc"><strong>register</strong>: Ro’yxatdan o’tish funksiyasi.</li></ul><ul id="1d96e77c-dcc1-8002-bad7-cb2adfebdc34" class="bulleted-list"><li style="list-style-type:disc"><strong>login_required</strong> dekoratori yordamida ba’zi sahifalarda avtorizatsiya tekshirilishi mumkin (masalan, kitob qo’shish va tahrir qilish).</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8010-9992-ddcef62ba72e" class="code"><code class="language-Python">from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from .models import Book
+from .forms import BookForm
+
+# Bosh sahifa
+def home(request):
+    return render(request, &#x27;home.html&#x27;)
+
+# Kitoblar ro&#x27;yxati - qidiruv va pagination qo&#x27;llanilgan
+def book_list(request):
+    query = request.GET.get(&#x27;q&#x27;, &#x27;&#x27;)
+    books = Book.objects.all()
+    if query:
+        books = books.filter(nomi__icontains=query)
+    paginator = Paginator(books, 5)  # Sahifada 5 ta kitob
+    page = request.GET.get(&#x27;page&#x27;)
+    books_page = paginator.get_page(page)
+    context = {&#x27;books&#x27;: books_page, &#x27;query&#x27;: query}
+    return render(request, &#x27;books.html&#x27;, context)
+
+# Kitob batafsil
+def book_detail(request, id):
+    book = get_object_or_404(Book, id=id)
+    return render(request, &#x27;book_detail.html&#x27;, {&#x27;book&#x27;: book})
+
+# Yangi kitob qo&#x27;shish (faqat avtorizatsiyadan o’tgan foydalanuvchilar uchun)
+@login_required
+def create_book(request):
+    if request.method == &#x27;POST&#x27;:
+        form = BookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(&#x27;books&#x27;)
+    else:
+        form = BookForm()
+    return render(request, &#x27;create_book.html&#x27;, {&#x27;form&#x27;: form})
+
+# Kitobni tahrirlash (faqat avtorizatsiyadan o’tgan foydalanuvchilar uchun)
+@login_required
+def edit_book(request, id):
+    book = get_object_or_404(Book, id=id)
+    if request.method == &#x27;POST&#x27;:
+        form = BookForm(request.POST, instance=book)
+        if form.is_valid():
+            form.save()
+            return redirect(&#x27;book_detail&#x27;, id=book.id)
+    else:
+        form = BookForm(instance=book)
+    return render(request, &#x27;edit_book.html&#x27;, {&#x27;form&#x27;: form, &#x27;book&#x27;: book})
+
+# Kitobni o&#x27;chirish (faqat avtorizatsiyadan o’tgan foydalanuvchilar uchun)
+@login_required
+def delete_book(request, id):
+    book = get_object_or_404(Book, id=id)
+    if request.method == &#x27;POST&#x27;:
+        book.delete()
+        return redirect(&#x27;books&#x27;)
+    return render(request, &#x27;delete_book.html&#x27;, {&#x27;book&#x27;: book})
+
+# Ro&#x27;yxatdan o&#x27;tish
+def register(request):
+    if request.method == &#x27;POST&#x27;:
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect(&#x27;home&#x27;)
+    else:
+        form = UserCreationForm()
+    return render(request, &#x27;register.html&#x27;, {&#x27;form&#x27;: form})
+</code></pre><h2 id="1d96e77c-dcc1-80b4-ba4e-e4528fcfaea8" class="">3. <strong>URL&#x27;lar (urls.py)</strong></h2><p id="1d96e77c-dcc1-8082-970b-f698872c95ec" class=""><code>urls.py</code> faylida yangi marshrutlarni qo’shib, Django’ning autentifikatsiya tizimi uchun login va logout URL’larini ham ko’rsatamiz. (Eslatma: Django’ning <code>LoginView</code> va <code>LogoutView</code> dan foydalanamiz.)</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8023-9079-f29e7cda792b" class="code"><code class="language-Python">from django.urls import path
+from django.contrib.auth import views as auth_views
+from . import views
+
+urlpatterns = [
+    path(&#x27;&#x27;, views.home, name=&#x27;home&#x27;),
+    path(&#x27;books/&#x27;, views.book_list, name=&#x27;books&#x27;),
+    path(&#x27;book-detail/&lt;int:id&gt;/&#x27;, views.book_detail, name=&#x27;book_detail&#x27;),
+    path(&#x27;book-edit/&lt;int:id&gt;/&#x27;, views.edit_book, name=&#x27;edit_book&#x27;),
+    path(&#x27;create/&#x27;, views.create_book, name=&#x27;create_book&#x27;),
+    path(&#x27;delete-book/&lt;int:id&gt;/&#x27;, views.delete_book, name=&#x27;delete_book&#x27;),
+    
+    # Avtorizatsiya uchun URL&#x27;lar
+    path(&#x27;register/&#x27;, views.register, name=&#x27;register&#x27;),
+    path(&#x27;login/&#x27;, auth_views.LoginView.as_view(template_name=&#x27;login.html&#x27;), name=&#x27;login&#x27;),
+    path(&#x27;logout/&#x27;, auth_views.LogoutView.as_view(next_page=&#x27;home&#x27;), name=&#x27;logout&#x27;),
+]
+</code></pre><h2 id="1d96e77c-dcc1-807e-bd15-f4a05314f1a6" class="">4. <strong>Templates</strong></h2><h3 id="1d96e77c-dcc1-8040-bab4-f9d029af5caf" class="">4.1. <strong>base.html</strong></h3><p id="1d96e77c-dcc1-80eb-b444-c7b96ef9b620" class="">Bu asosiy shablonda har bir sahifa uchun umumiy navbar (kirish, ro’yxatdan o’tish, chiqish havolalari) va Bootstrap uslubi kiritilgan:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8007-8993-d5cb0298ef13" class="code"><code class="language-Python">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uz&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;{% block title %}Kutubxona{% endblock %}&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-dark text-white&quot;&gt;
+    &lt;nav class=&quot;navbar navbar-expand-lg navbar-dark bg-danger&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+            &lt;a class=&quot;navbar-brand&quot; href=&quot;{% url &#x27;home&#x27; %}&quot;&gt;Kutubxona&lt;/a&gt;
+            &lt;div class=&quot;d-flex align-items-center&quot;&gt;
+                &lt;a class=&quot;nav-link d-inline text-white&quot; href=&quot;{% url &#x27;books&#x27; %}&quot;&gt;Kitoblar&lt;/a&gt;
+                &lt;a class=&quot;nav-link d-inline text-white&quot; href=&quot;{% url &#x27;create_book&#x27; %}&quot;&gt;Yangi Kitob&lt;/a&gt;
+                {% if user.is_authenticated %}
+                    &lt;span class=&quot;nav-link d-inline&quot;&gt;Salom, {{ user.username }}!&lt;/span&gt;
+                    &lt;a class=&quot;nav-link d-inline text-white&quot; href=&quot;{% url &#x27;logout&#x27; %}&quot;&gt;Chiqish&lt;/a&gt;
+                {% else %}
+                    &lt;a class=&quot;nav-link d-inline text-white&quot; href=&quot;{% url &#x27;login&#x27; %}&quot;&gt;Kirish&lt;/a&gt;
+                    &lt;a class=&quot;nav-link d-inline text-white&quot; href=&quot;{% url &#x27;register&#x27; %}&quot;&gt;Ro’yxatdan o’tish&lt;/a&gt;
+                {% endif %}
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/nav&gt;
+    &lt;div class=&quot;container mt-4&quot;&gt;
+        {% block content %}
+        {% endblock %}
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><p id="1d96e77c-dcc1-8079-9541-f879ace85761" class="">4.2. <strong>home.html</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8016-a9c4-db4724fa0f9e" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}Bosh sahifa{% endblock %}
+
+{% block content %}
+&lt;h1&gt;Xush kelibsiz kutubxonaga!&lt;/h1&gt;
+&lt;p&gt;Bu yerda siz kitoblar ro&#x27;yxatini ko&#x27;rishingiz, tahrirlashingiz yoki yangi kitob qo&#x27;shishingiz mumkin.&lt;/p&gt;
+{% endblock %}
+</code></pre><h3 id="1d96e77c-dcc1-80f4-9e76-fdd91bd23110" class="">4.3. <strong>books.html</strong></h3><p id="1d96e77c-dcc1-80f1-afca-e03be4b45238" class="">Bu shablonda qidiruv formasi va pagination navigatsiyasi qo’shilgan:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-800e-aa76-d4ad58612f46" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}Kitoblar{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Kitoblar ro&#x27;yxati&lt;/h2&gt;
+
+&lt;!-- Qidiruv formasi --&gt;
+&lt;form method=&quot;get&quot; class=&quot;mb-4&quot;&gt;
+    &lt;div class=&quot;input-group&quot;&gt;
+       &lt;input type=&quot;text&quot; name=&quot;q&quot; class=&quot;form-control&quot; placeholder=&quot;Qidirish...&quot; value=&quot;{{ query }}&quot;&gt;
+       &lt;button class=&quot;btn btn-outline-secondary&quot; type=&quot;submit&quot;&gt;Qidirish&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;ul class=&quot;list-group&quot;&gt;
+    {% for book in books %}
+        &lt;li class=&quot;list-group-item bg-secondary text-white&quot;&gt;
+            &lt;a class=&quot;text-white&quot; href=&quot;{% url &#x27;book_detail&#x27; book.id %}&quot;&gt;{{ book.nomi }}&lt;/a&gt;
+        &lt;/li&gt;
+    {% empty %}
+        &lt;li class=&quot;list-group-item&quot;&gt;Kitoblar yo‘q&lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;
+
+&lt;!-- Sahifalash (pagination) --&gt;
+&lt;nav aria-label=&quot;Page navigation&quot; class=&quot;mt-4&quot;&gt;
+    &lt;ul class=&quot;pagination&quot;&gt;
+        {% if books.has_previous %}
+            &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;?q={{ query }}&amp;page={{ books.previous_page_number }}&quot;&gt;Oldingi&lt;/a&gt;&lt;/li&gt;
+        {% else %}
+            &lt;li class=&quot;page-item disabled&quot;&gt;&lt;span class=&quot;page-link&quot;&gt;Oldingi&lt;/span&gt;&lt;/li&gt;
+        {% endif %}
+        &lt;li class=&quot;page-item disabled&quot;&gt;
+            &lt;span class=&quot;page-link&quot;&gt;
+                Sahifa {{ books.number }} / {{ books.paginator.num_pages }}
+            &lt;/span&gt;
+        &lt;/li&gt;
+        {% if books.has_next %}
+            &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;?q={{ query }}&amp;page={{ books.next_page_number }}&quot;&gt;Keyingi&lt;/a&gt;&lt;/li&gt;
+        {% else %}
+            &lt;li class=&quot;page-item disabled&quot;&gt;&lt;span class=&quot;page-link&quot;&gt;Keyingi&lt;/span&gt;&lt;/li&gt;
+        {% endif %}
+    &lt;/ul&gt;
+&lt;/nav&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-80db-a313-de1863e7037d" class="">4.4. <strong>book_detail.html</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-80ef-b6b7-cc2cad5873b8" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}{{ book.nomi }}{% endblock %}
+
+{% block content %}
+&lt;h2&gt;{{ book.nomi }}&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Muallif:&lt;/strong&gt; {{ book.muallif }}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nashr yili:&lt;/strong&gt; {{ book.yili }}&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Havola:&lt;/strong&gt; &lt;a href=&quot;{{ book.url }}&quot; target=&quot;_blank&quot;&gt;{{ book.url }}&lt;/a&gt;&lt;/p&gt;
+
+&lt;a href=&quot;{% url &#x27;edit_book&#x27; book.id %}&quot; class=&quot;btn btn-warning&quot;&gt;Tahrirlash&lt;/a&gt;
+&lt;form method=&quot;post&quot; action=&quot;{% url &#x27;delete_book&#x27; book.id %}&quot; style=&quot;display:inline;&quot;&gt;
+    {% csrf_token %}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-danger&quot;&gt;O&#x27;chirish&lt;/button&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-80c0-8c49-e883ed58691a" class="">4.5. <strong>create_book.html</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8070-a724-cdf816287ca3" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}Yangi Kitob{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Yangi kitob qo&#x27;shish&lt;/h2&gt;
+&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-success&quot;&gt;Saqlash&lt;/button&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-8086-bf32-dff5ad50389b" class="">4.6. <strong>edit_book.html</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8036-adc1-eb65f4e355eb" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}{{ book.nomi }} - Tahrirlash{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Kitobni tahrirlash: {{ book.nomi }}&lt;/h2&gt;
+&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Saqlash&lt;/button&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-808e-9870-ee89ff42c58e" class="">4.7. <strong>delete_book.html</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8027-bac7-dfc5e5f9462a" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}{{ book.nomi }} - O&#x27;chirish{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Haqiqatan ham &quot;{{ book.nomi }}&quot; kitobini o‘chirmoqchimisiz?&lt;/h2&gt;
+&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-danger&quot;&gt;Ha, o‘chirish&lt;/button&gt;
+    &lt;a href=&quot;{% url &#x27;book_detail&#x27; book.id %}&quot; class=&quot;btn btn-secondary&quot;&gt;Bekor qilish&lt;/a&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-8080-bc99-e60e349ec638" class="">
+</p><p id="1d96e77c-dcc1-805c-a609-d1e3263c66da" class="">4.8. <strong>Ro’yxatdan o’tish (register.html)</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-808f-97d5-fb13450ca573" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}Ro&#x27;yxatdan O&#x27;tish{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Ro&#x27;yxatdan O&#x27;tish&lt;/h2&gt;
+&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-success&quot;&gt;Ro&#x27;yxatdan o&#x27;tish&lt;/button&gt;
+&lt;/form&gt;
+{% endblock %}
+</code></pre><p id="1d96e77c-dcc1-8035-8317-e01ab3b0c548" class="">
+</p><p id="1d96e77c-dcc1-80bd-a673-e09c7edccde1" class="">4.9. <strong>Kirish (login.html)</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8036-a8e9-d1cef9b437fc" class="code"><code class="language-Python">{% extends &#x27;base.html&#x27; %}
+
+{% block title %}Kirish{% endblock %}
+
+{% block content %}
+&lt;h2&gt;Kirish&lt;/h2&gt;
+&lt;form method=&quot;post&quot;&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Kirish&lt;/button&gt;
+&lt;/form&gt;
+{% endblock %}</code></pre><p id="1d96e77c-dcc1-807e-9dd7-ff65c9c1018a" class="">Ushbu barcha kodlarni to‘g‘ri joylashtirib, Django loyihangizni sozlasangiz, quyidagi funksiyalarga ega bo‘lasiz:</p><ul id="1d96e77c-dcc1-80e3-9b95-cbbe8be6878d" class="bulleted-list"><li style="list-style-type:disc"><strong>Admin panel</strong> orqali kitoblarni boshqarish</li></ul><ul id="1d96e77c-dcc1-8015-b149-c797a14fc4ca" class="bulleted-list"><li style="list-style-type:disc">Foydalanuvchi tizimiga kirish va ro’yxatdan o’tish</li></ul><ul id="1d96e77c-dcc1-8024-ba55-d5334ffdfebf" class="bulleted-list"><li style="list-style-type:disc">Kitoblar ro’yxatida qidiruv va sahifalash (pagination)</li></ul><ul id="1d96e77c-dcc1-801a-8b30-c0d0e4869942" class="bulleted-list"><li style="list-style-type:disc">To‘liq CRUD operatsiyalari</li></ul><p id="1d96e77c-dcc1-80c3-a8de-e201ca444b6a" class="">Agar qo’shimcha savollar bo’lsa yoki boshqa funksiyalar kiritishni xohlasangiz, aytib o&#x27;ting!</p><p id="1d96e77c-dcc1-80d9-bdea-dd225481e1ff" class="">
+</p><p id="1d96e77c-dcc1-802b-9db9-c51cbc684968" class=""><code>views.py</code> – Asosiy funksiyalar</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8027-a9e9-d046fa68d3c5" class="code"><code class="language-Python">from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from .models import Book
+from .forms import BookForm
+
+def home(request):
+    return render(request, &#x27;home.html&#x27;)
+
+def book_list(request):
+    search_query = request.GET.get(&#x27;q&#x27;, &#x27;&#x27;)
+    books = Book.objects.all()
+    if search_query:
+        books = books.filter(title__icontains=search_query)
+    paginator = Paginator(books, 5)
+    page = request.GET.get(&#x27;page&#x27;)
+    books = paginator.get_page(page)
+    return render(request, &#x27;books.html&#x27;, {&#x27;books&#x27;: books, &#x27;search_query&#x27;: search_query})
+
+def book_detail(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    return render(request, &#x27;book_detail.html&#x27;, {&#x27;book&#x27;: book})
+
+@login_required
+def create_book(request):
+    if request.method == &#x27;POST&#x27;:
+        form = BookForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(&#x27;books&#x27;)
+    else:
+        form = BookForm()
+    return render(request, &#x27;create_book.html&#x27;, {&#x27;form&#x27;: form})
+
+@login_required
+def edit_book(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    if request.method == &#x27;POST&#x27;:
+        form = BookForm(request.POST, instance=book)
+        if form.is_valid():
+            form.save()
+            return redirect(&#x27;book_detail&#x27;, pk=book.pk)
+    else:
+        form = BookForm(instance=book)
+    return render(request, &#x27;edit_book.html&#x27;, {&#x27;form&#x27;: form})
+
+@login_required
+def delete_book(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    if request.method == &#x27;POST&#x27;:
+        book.delete()
+        return redirect(&#x27;books&#x27;)
+    return render(request, &#x27;delete_book.html&#x27;, {&#x27;book&#x27;: book})
+
+def register(request):
+    if request.method == &#x27;POST&#x27;:
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect(&#x27;home&#x27;)
+    else:
+        form = UserCreationForm()
+    return render(request, &#x27;register.html&#x27;, {&#x27;form&#x27;: form})
+</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-8044-b131-ee1994aeea6d" class="code"><code class="language-Python">from django import forms
+from .models import Book
+
+class BookForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = [&#x27;title&#x27;, &#x27;author&#x27;, &#x27;isbn&#x27;, &#x27;category&#x27;]
+</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-806b-888b-e3bcbb37561a" class="code"><code class="language-Python">from django.urls import path
+from django.contrib.auth import views as auth_views
+from . import views
+
+urlpatterns = [
+    path(&#x27;&#x27;, views.home, name=&#x27;home&#x27;),
+    path(&#x27;books/&#x27;, views.book_list, name=&#x27;books&#x27;),
+    path(&#x27;books/&lt;int:pk&gt;/&#x27;, views.book_detail, name=&#x27;book_detail&#x27;),
+    path(&#x27;books/create/&#x27;, views.create_book, name=&#x27;create_book&#x27;),
+    path(&#x27;books/&lt;int:pk&gt;/edit/&#x27;, views.edit_book, name=&#x27;edit_book&#x27;),
+    path(&#x27;books/&lt;int:pk&gt;/delete/&#x27;, views.delete_book, name=&#x27;delete_book&#x27;),
+    path(&#x27;register/&#x27;, views.register, name=&#x27;register&#x27;),
+    path(&#x27;login/&#x27;, auth_views.LoginView.as_view(template_name=&#x27;login.html&#x27;), name=&#x27;login&#x27;),
+    path(&#x27;logout/&#x27;, auth_views.LogoutView.as_view(next_page=&#x27;home&#x27;), name=&#x27;logout&#x27;),
+]
+</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1d96e77c-dcc1-809f-a0a0-db13e308d519" class="code"><code class="language-Python">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uz&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;{% block title %}Kutubxona{% endblock %}&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav class=&quot;navbar navbar-expand-lg navbar-light bg-light&quot;&gt;
+  &lt;div class=&quot;container-fluid&quot;&gt;
+    &lt;a class=&quot;navbar-brand&quot; href=&quot;{% url &#x27;home&#x27; %}&quot;&gt;Kutubxona&lt;/a&gt;
+    &lt;div class=&quot;collapse navbar-collapse&quot;&gt;
+      &lt;ul class=&quot;navbar-nav me-auto mb-2 mb-lg-0&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;{% url &#x27;books&#x27; %}&quot;&gt;Kitoblar&lt;/a&gt;&lt;/li&gt;
+        {% if user.is_authenticated %}
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;{% url &#x27;create_book&#x27; %}&quot;&gt;Yangi Kitob&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;{% url &#x27;logout&#x27; %}&quot;&gt;Chiqish&lt;/a&gt;&lt;/li&gt;
+        {% else %}
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;{% url &#x27;login&#x27; %}&quot;&gt;Kirish&lt;/a&gt;&lt;/li&gt;
+          &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;{% url &#x27;register&#x27; %}&quot;&gt;Ro‘yxatdan o‘tish&lt;/a&gt;&lt;/li&gt;
+        {% endif %}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;div class=&quot;container mt-4&quot;&gt;
+    {% block content %}{% endblock %}
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="1d96e77c-dcc1-807b-85ab-f173af7b16f2" class="">HTML Shablonlar</h2><ul id="1d96e77c-dcc1-80d1-b40a-fb7b8a23e20a" class="bulleted-list"><li style="list-style-type:disc"><code>home.html</code>: Bosh sahifa</li></ul><ul id="1d96e77c-dcc1-808f-9532-c706c116d355" class="bulleted-list"><li style="list-style-type:disc"><code>books.html</code>: Kitoblar ro‘yxati</li></ul><ul id="1d96e77c-dcc1-800f-907d-f285ff4b2fc9" class="bulleted-list"><li style="list-style-type:disc"><code>book_detail.html</code>: Kitob tafsilotlari</li></ul><ul id="1d96e77c-dcc1-80e9-b7cf-f113b18b05ff" class="bulleted-list"><li style="list-style-type:disc"><code>create_book.html</code>: Yangi kitob qo‘shish</li></ul><ul id="1d96e77c-dcc1-80d2-ad41-f28e83836f7c" class="bulleted-list"><li style="list-style-type:disc"><code>edit_book.html</code>: Kitobni tahrirlash</li></ul><ul id="1d96e77c-dcc1-8027-8dc1-f8975d18488c" class="bulleted-list"><li style="list-style-type:disc"><code>delete_book.html</code>: Kitobni o‘chirish</li></ul><ul id="1d96e77c-dcc1-8078-a9de-ce58fec019a8" class="bulleted-list"><li style="list-style-type:disc"><code>register.html</code>: Ro‘yxatdan o‘tish</li></ul><ul id="1d96e77c-dcc1-8082-befb-cef799418437" class="bulleted-list"><li style="list-style-type:disc"><code>login.html</code>: Kirish</li></ul><p id="1d96e77c-dcc1-8089-9d79-da7349ff56cc" class="">
+</p><p id="1d96e77c-dcc1-80c0-b717-f86134a66a1f" class="">
+</p><p id="1d96e77c-dcc1-8045-b7e1-eb6a0c53594b" class="">
+</p><p id="1d96e77c-dcc1-80df-bc92-c37c688eff90" class="">
+</p><p id="1d96e77c-dcc1-80a2-af49-fbcedfa12d1f" class="">
+</p><p id="1d96e77c-dcc1-80c0-91f4-f8a775a1a765" class="">
+</p><p id="1d96e77c-dcc1-8088-bd2e-c8d8e31aa7af" class="">
+</p><figure id="1d96e77c-dcc1-806a-bbeb-fc0e0c0964b9"><div class="source"><a href="https://www.notion.soundefined"></a></div></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

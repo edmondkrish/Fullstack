@@ -1,0 +1,47 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}Kitoblar Ro'yxati{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/books.css' %}">
+
+
+<div class="bookslist">
+   <div class="container">
+        <div class="headerbooklist">
+            <h1>Kitoblar Ro'yxati</h1>
+            <p>Bu yerda siz kitoblar ro'yxatini ko'rishingiz mumkin.Bizning kitoblarimiz sizga bilim va ma'rifat berish uchun mo'ljallangan.</p>
+        </div>
+      
+
+        <div class="row rbook">
+        {% for book in books %}
+            <div class="col-6 ">
+                <div class="card cardbook">
+                    <div class="card-header">
+                       <h4>{{book.name}}</h4>
+                      </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{book.description}}</h5>
+                        <p class="card-text"><strong>Muallif:</strong> {{book.author}}</p>
+                        <!-- <p class="card-text"><strong>Yili:</strong> {{book.published_date}}</p> -->
+                        <div class="row">
+                            <div class="col-2 buttons"> <a href="{{book.url}}" class="btn btn-primary">Batafsil</a></div>
+                            <div class="col-2 buttons"> <a href="{% url 'book_detail' book.id %}" class="btn btn-primary">Edit</a></div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+
+       
+          
+
+   </div>
+</div>
+
+
+{% endblock %}

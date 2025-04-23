@@ -1,0 +1,63 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
+
+<div class="home-page">
+    <div class="home">
+        <div class="container">
+
+        
+            <div class="home-title">
+                <h1>Kutubxonasi Yil</h1>
+            </div>
+            <div class="home-paragraph">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet accusantium laborum voluptatum, qui aut magni dicta vitae voluptate, ipsum dolor ducimus saepe perspiciatis maiores. Minima debitis labore quod commodi?</p>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+
+<div class="emaolsender">
+    <div class="container">
+        <div class="email">
+            <div class="row">
+                <div class="col-8">
+                    <input type="text" class="form-control" placeholder="Emailingizni kiriting" aria-label="Recipient's username" aria-describedby="button-addon2">
+                </div>
+                <div class="col"></div>
+                <div class="col">
+                    <button class="btn submit" type="button" id="button-addon2">Yuborish</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="home-about-title">
+        <h1>Biz haqimizda</h1>
+    </div>
+    <div class="home-about-paragraph">
+        <div class="row">
+            <div class="col-6 par">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quis amet. Fugiat eveniet pariatur quo sunt! Eum unde quia et libero dolorem hic qui at impedit facilis fugiat provident consequatur autem totam eligendi veniam, quibusdam natus voluptas nemo quaerat quos, error tempora eaque inventore. Aut, corrupti blanditiis quisquam modi doloremque nemo dignissimos inventore, aliquam dicta ducimus distinctio. Iusto natus harum magni repellat, assumenda similique odio autem consectetur illo recusandae possimus ullam blanditiis nobis quasi eius provident commodi, nam cum incidunt animi accusantium nulla. Nostrum tempore, dolorum et debitis ex maiores qui dolorem sapiente, earum perspiciatis magni ea impedit, neque sed.</p>
+            </div>
+            <div class="col-6">
+                <div class="image">
+                    <img src="{% static 'images/book.jpg' %}" alt="home" class="home-about-img">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

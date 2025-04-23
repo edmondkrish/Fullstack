@@ -1,0 +1,20 @@
+.deletbooks{
+    margin: 50px 20px;
+    height: 60vh;
+    padding: 50px;
+}
+
+.card-footer {
+    
+}
+.footerbuttons{
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+.bookname{
+    color: #8b0404;
+}
+.footerbuttons a,form{
+    margin: 5px;
+}

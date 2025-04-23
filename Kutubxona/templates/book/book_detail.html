@@ -1,0 +1,46 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}Detail Book{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/detailbook.css' %}">
+
+<div class="detailbook">
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2>{{ book.name }}</h2>
+            </div>
+            <div class="card-body">
+                <p>{{ book.description }}</p>
+                <p>Muallif: {{ book.author }}</p>
+            </div>
+           
+            <div class="card-footer">
+                <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+                <a href="{% url 'books' %}" class="btn btn-primary">Books</a>
+                <a href="{% url 'edit_book' book.id %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'delete_book' book.id %}" class="btn btn-danger">Delete</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+<!-- 
+    <h2>{{book.name}}</h2>
+    <p>{{book.description}}</p> -->
+
+    <!-- <a href="{% url 'book_detail' book.id %}" class="btn btn-warning">Tahrirlash</a> -->
+<!--     
+    <form method="post" action="" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">O'chirish</button>
+    </form> -->
+</div>
+
+
+
+{% endblock %}

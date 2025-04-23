@@ -1,0 +1,49 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block title %}Delete Book{% endblock title %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/deletebook.css' %}">
+
+<div class="deletbooks">
+    <div class="container">
+ 
+        <div class="card">
+            <div class="card-header">
+                <h2>{{book.name}}</h2>
+            </div>
+            <div class="card-body">
+                <p>{{book.description}}</p>
+                <p>Muallif: {{book.author}}</p>
+            </div>
+            <div class="card-footer">
+                <h3>Do you want delete:<span class="bookname">{{book.name}}</span></h3>
+                <div class="footerbuttons">
+                    <a href="{%url 'books'%}" class="btn btn-warning">Cancel</a>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+                
+            </div>
+
+
+        </div>
+
+
+        
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock content%}
